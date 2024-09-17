@@ -1,5 +1,4 @@
 # Whitespace Interpreter
-
 ## What's Whitespace?
 Whitespace is an imperative, stack-based esoteric programming language that uses whitespace characters for computation:
 - [space] or " " (ASCII 32)
@@ -20,7 +19,7 @@ There are 5 IMP sequences:
 
 ... and quite a few (24) operations:
 
-IMP: [space]
+Stack manipulation (IMP: [space])
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space] | integer | Push the integer onto the stack |
@@ -30,7 +29,7 @@ IMP: [space]
 | [line-feed][line-feed] | - | Discard the top item on the stack |
 | [tab][line-feed] | integer | Slide n items off the stack, keeping the top item |
 
-IMP: [tab][space]
+Arithmetic (IMP: [tab][space])
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space][space] | - | Addition |
@@ -39,24 +38,24 @@ IMP: [tab][space]
 | [tab][space] | - | Integer Division |
 | [tab][tab] | - | Modulo |
 
-IMP: [tab][tab]
+Heap access (IMP: [tab][tab])
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space] | - | Store in heap |
 | [tab] | - | Retrieve from heap |
 
-IMP: [line-feed]
+Flow control (IMP: [line-feed])
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
-| [space][space] | Label | Mark a location in the program |
-| [space][tab] | Label | Call a subroutine |
-| [space][line-feed] | Label | Jump to a label |
-| [tab][space] | Label | Jump to a label if the top of the stack is 0 |
-| [tab][tab] | Label | Jump to a label if the top of the stack is negative |
+| [space][space] | label | Mark a location in the program |
+| [space][tab] | label | Call a subroutine |
+| [space][line-feed] | label | Jump to a label |
+| [tab][space] | label | Jump to a label if the top of the stack is 0 |
+| [tab][tab] | label | Jump to a label if the top of the stack is negative |
 | [tab][line-feed] | - | End a subroutine and transfer control back to caller |
 | [line-feed][line-feed] | - | End the program |
 
-IMP: [tab][line-feed]
+I/O (IMP: [tab][line-feed])
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space][space] | - | Output the character at the top of the stack |
