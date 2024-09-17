@@ -19,7 +19,7 @@ There are 5 IMP sequences:
 
 ... and quite a few (24) operations:
 
-Stack manipulation (IMP: [space])
+*Stack manipulation (IMP: [space])*
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space] | integer | Push the integer onto the stack |
@@ -29,7 +29,7 @@ Stack manipulation (IMP: [space])
 | [line-feed][line-feed] | - | Discard the top item on the stack |
 | [tab][line-feed] | integer | Slide n items off the stack, keeping the top item |
 
-Arithmetic (IMP: [tab][space])
+*Arithmetic (IMP: [tab][space])*
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space][space] | - | Addition |
@@ -38,13 +38,13 @@ Arithmetic (IMP: [tab][space])
 | [tab][space] | - | Integer Division |
 | [tab][tab] | - | Modulo |
 
-Heap access (IMP: [tab][tab])
+*Heap access (IMP: [tab][tab])*
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space] | - | Store in heap |
 | [tab] | - | Retrieve from heap |
 
-Flow control (IMP: [line-feed])
+*Flow control (IMP: [line-feed])*
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space][space] | label | Mark a location in the program |
@@ -55,7 +55,7 @@ Flow control (IMP: [line-feed])
 | [tab][line-feed] | - | End a subroutine and transfer control back to caller |
 | [line-feed][line-feed] | - | End the program |
 
-I/O (IMP: [tab][line-feed])
+*I/O (IMP: [tab][line-feed])*
 | Operator | Parameter | Meaning |
 | ------------- | ----------- | ------------- |
 | [space][space] | - | Output the character at the top of the stack |
@@ -63,4 +63,4 @@ I/O (IMP: [tab][line-feed])
 | [tab][space] | - | Read a character and place it in the location given by the top of the stack |
 | [tab][tab] | - | Read a number and place it in the location given by the top of the stack |
 
-In cases where commands expect a parameter, [space] = 0 and [tab] = 1, and the bit string gets terminated by a [line-feed] character.
+In cases where commands expect a parameter, *[space] = 0 and [tab] = 1, and the bit string gets terminated by a [line-feed] character*.
