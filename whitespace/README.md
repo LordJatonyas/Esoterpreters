@@ -7,7 +7,7 @@ Whitespace is an imperative, stack-based esoteric programming language that uses
 
 Its commands are written as an instruction modification parameter (IMP) followed by an operation related to that particular IMP, and then by parameters should the operation require them.
 
-## Syntax
+## Syntax[^1]
 There are 5 IMP sequences:
 | IMP | Meaning |
 | --------- | ------------- |
@@ -64,3 +64,5 @@ There are 5 IMP sequences:
 | [tab][tab] | - | Read a number and place it in the location given by the top of the stack |
 
 In cases where commands expect a parameter, **[space] = 0 and [tab] = 1, and the bit string gets terminated by a [line-feed] character**.
+
+[^1]: [Whitespace tutorial](https://web.archive.org/web/20150618184706/http://compsoc.dur.ac.uk/whitespace/tutorial.php)
